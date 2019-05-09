@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT5</title>
+</head>
+<body>
+<p>Nhập vào đây một chuỗi</p>
+<input id="input" type="text">
+<input id="input1" type="text">
+<input type="button" value="check" onclick="kiemtra()">
+<p id="daura"></p>
+<script>
+    function kiemtra(i) {
+        let a = document.getElementById("input").value;
+        let b = document.getElementById("input1").value;
+        let arr = a.split('');
+        let arr1 = b.split('');
+        console.log(arr);
+        console.log(arr1);
+
+        for (let i = 0; i < arr.length || i < arr1.length; i++) {
+            if (!(arr[i] == arr1[i])) {
+                document.getElementById("daura").innerText = "Hai chuỗi này không giống nhau";
+                break;
+            } else {
+                document.getElementById("daura").innerText = "Hai chuỗi này giống nhau";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

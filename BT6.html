@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT6</title>
+</head>
+<body>
+<p>Nhập vào đây một số nguyên làm phần tử của mảng</p>
+<input id="input" type="text">
+<input type="button" value="Đổi" onclick="doi()">
+<form name="f">
+    <textarea id="daura" name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+</form>
+<script>
+    let arr=[];
+    let i=0;
+    function doi() {
+        let nhap = document.getElementById("input").value;
+        arr = nhap.split("");
+        console.log(arr);
+        for(i=0; i<arr.length; i++){
+            if(arr[i]== "-"){
+                arr[i] = "_";
+            }
+        }
+        document.getElementById("daura").innerHTML= arr.join("");
+    }
+</script>
+</body>
+</html>

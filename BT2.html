@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT2</title>
+</head>
+<body>
+<p>Nhập vào đây một số nguyên làm phần tử của mảng</p>
+<input id="input" type="text">
+<input type="button" value="add" onclick="them()">
+<input type="button" value="Hiển thị" onclick="out()">
+<p id="daura"></p>
+<script>
+    let arr=[];
+    let i=0;
+
+    function them() {
+        let nhap= document.getElementById("input").value;
+        arr[i]= nhap;
+        i++;
+        document.getElementById("input").value= "";
+        console.log(arr);
+    }
+
+    function out() {
+        let arr1=arr.reverse();
+        document.getElementById("daura").innerHTML = "Mảng đảo ngược của hàm vừa nhập là:"+ arr1;
+    }
+</script>
+</body>
+</html>
